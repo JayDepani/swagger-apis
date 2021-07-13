@@ -344,7 +344,7 @@ router.post('/forgotpassword',async(req,res)=>{
                     if(sendmail=="Sent"){
                         res.status(201).json({"message":"Check your register email for OTP","warning":"OTP will be expire in three minites"});
                     }else{
-                        res.status(500).json({"error" : "Forgot Password after some time due to server error"});
+                        res.status(500).json({"error" : "Forgot Password after some time due to server error","error":`${sendmail}`});
                     }
                 }else{
                     res.status(500).json({"error" : "Forgot Password after some time due to server error"});
