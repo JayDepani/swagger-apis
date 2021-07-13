@@ -25,7 +25,7 @@ const options = {
         },
         servers:[
             {
-                url: "https://jd-swagger-apis.herokuapp.com/",
+                url:`${host}`,
             }
         ],
         components: {
@@ -48,7 +48,7 @@ const options = {
 
 const specs = swaggerJsDoc(options);
 
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/", swaggerUI.serve, swaggerUI.setup(specs));
 
 app.use(express.json());
 // app.use(morgan('dev'));
