@@ -48,7 +48,7 @@ const options = {
 
 const specs = swaggerJsDoc(options);
 
-app.use("/", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 app.use(express.json());
 // app.use(morgan('dev'));
