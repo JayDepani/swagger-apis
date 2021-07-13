@@ -5,6 +5,10 @@ const jwt = require('jsonwebtoken');
 const OtpDetails = require('../modules/otp_modules');
 const functions = require('../helpers/functions');
 
+router.get('/',async(req,res)=>{
+    res.redirect('/api-docs');
+})
+
 /**
  * @swagger
  * components:
