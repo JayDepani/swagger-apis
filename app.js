@@ -25,7 +25,7 @@ const options = {
         },
         servers:[
             {
-                url:`${host}`,
+                url: "https://jd-swagger-apis.herokuapp.com/",
             }
         ],
         components: {
