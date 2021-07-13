@@ -25,8 +25,7 @@ const options = {
         },
         servers:[
             {
-                url:"http://localhost:8000",
-                description:"Local Storage"
+                url:`${process.env.SITE_URL}`,
             }
         ],
         components: {
